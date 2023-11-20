@@ -66,26 +66,30 @@ body {
 #home-info{
     background-color: azure;
     display: grid;
+    grid-row: 1/2;
 }
 #home-middle{
     background-color: aqua;
+    grid-row: 2/9;
 }
 #home-forecast{
-    background-color:dodgerblue
+    background-color:dodgerblue;
+    grid-row: 9/13;
 }
 #info-part-1{
     background-color: brown;
-    grid-column: 0/1;
-    grid-column-end: 1;
+    grid-column: 1/2;
 }
 #info-part-2{
     background-color: crimson;
-    grid-column-start: 1;
-    grid-column-end: 2;
+    grid-column: 2/3;
 }
 #info-part-3{
     background-color: darkred;
-    grid-column-start: 2;
-    grid-column-end: 3;
+    grid-column: 3/3;
+    display: grid;
+    align-content:space-around;
+    justify-items: center;
 }
+
 
