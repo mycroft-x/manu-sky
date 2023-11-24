@@ -21,7 +21,7 @@ function menuExpand(params) {
 // middle.style.background="url('/img/images/night.jpg')"
 
 
-if (dawn.includes(Date)){
+if (dawn.includes(D)){
     middle.style.background = "url('/img/images/day.jpg')"
 } else {
     middle.style.background = "url('/img/images/night.jpg')"
