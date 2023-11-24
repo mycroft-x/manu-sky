@@ -2,10 +2,12 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 body {
     margin: 0;
     display: flex;
+    background-image: url("/img/images/home.png");
   }
 #nav-bar{
     height: 100vh;
@@ -59,37 +61,45 @@ body {
 #home{
     width: 63vw;
     height: calc(5/7 * 100vh);
-    margin: auto;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     background-color:darkslategrey;
 }
 #home-info{
     background-color: azure;
-    display: grid;
-    grid-row: 1/2;
+    height: calc(1/6 *100%);
+    display: flex;
 }
 #home-middle{
     background-color: aqua;
-    grid-row: 2/9;
+    height: calc(3.5/6 *100%);
 }
 #home-forecast{
     background-color:dodgerblue;
-    grid-row: 9/13;
+    height: calc(1.6/6 *100%);
 }
 #info-part-1{
     background-color: brown;
-    grid-column: 1/2;
+    display: flex;
+    width: calc(3/8 *100%);
 }
 #info-part-2{
     background-color: crimson;
-    grid-column: 2/3;
+    width: calc(2/8 *100%);
+    text-align: center;
 }
 #info-part-3{
     background-color: darkred;
-    grid-column: 3/3;
-    display: grid;
-    align-content:space-around;
-    justify-items: center;
+    width: calc(3/8 *100%);
+    text-align: center;
 }
+#weather-icon{
+    width: 25%;
+    height: max-content;
+}
+#temp-cont{
+    border-left: 1cqi black solid;
+}
+
 
 
