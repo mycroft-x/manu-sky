@@ -9,4 +9,4 @@ export function theming(params) {
         middle.style.background = "url('/img/images/night.jpg')"
         middle.style.backgroundSize = "cover"
     }  
-}
+}wvlnjihiov
