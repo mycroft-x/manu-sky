@@ -1,3 +1,9 @@
+/* --white: #ffffffff;
+--celestial-blue: #4997d0ff;
+--cerulean: #007ea7ff;
+--prussian-blue: #003459ff;
+--rich-black: #00171fff; */
+
 *{
     padding: 0;
     margin: 0;
@@ -7,12 +13,11 @@
 body {
     margin: 0;
     display: flex;
-    background-image: url("/img/images/home.png");
   }
 #nav-bar{
     height: 100vh;
     position: relative;
-    background-color: lightblue;
+    background-color: #ebebeb;
     min-width: 60px;
     width: max-content;
 }
@@ -63,43 +68,75 @@ body {
     height: calc(5/7 * 100vh);
     display: flex;
     flex-direction: column;
-    background-color:darkslategrey;
 }
 #home-info{
-    background-color: azure;
     height: calc(1/6 *100%);
+    background-color: #ebebeb;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
     display: flex;
 }
 #home-middle{
-    background-color: aqua;
     height: calc(3.5/6 *100%);
 }
 #home-forecast{
-    background-color:dodgerblue;
+    background-color: #ebebeb;
     height: calc(1.6/6 *100%);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 #info-part-1{
-    background-color: brown;
     display: flex;
     width: calc(3/8 *100%);
+    align-items: center;
 }
 #info-part-2{
-    background-color: crimson;
     width: calc(2/8 *100%);
-    text-align: center;
+    font-size: small;
+    padding: 10px;
 }
 #info-part-3{
-    background-color: darkred;
     width: calc(3/8 *100%);
     text-align: center;
+    padding: 10px;
 }
 #weather-icon{
     width: 25%;
-    height: max-content;
+    height: fit-content;
+    padding-left: 10px;
 }
 #temp-cont{
-    border-left: 1cqi black solid;
+    padding-left: 10px;
+    font-size: 40px;
 }
+#description-label, #time-label{
+    font-size: small;
+}
+#cof{
+    display: flex;
+    margin-bottom: 30px;
+    margin-left: 10px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.cofb{
+    background-color: #333;
+    color: #ccc;
+    padding: 0px 10px;
+}
+.cofb:hover{
+    background-color: #444444;
+}
+.active{
+    background-color: #222;
+    color: #ebebeb;
+}
+.active:hover{
+    background-color: #111;
+    color: #ebebeb;
+}
+
 
 
 

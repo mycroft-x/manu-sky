@@ -1,32 +1,38 @@
-const menuBtn = document.getElementById('menu-btn')
-const navBar = document.getElementById('nav-bar')
-const middle = document.getElementById('home-middle')
+import { myGeolocator } from "./locator.js";
+import { timeUpdate } from "./timings.js";
+import {  } from "./theming.js";
+import { wicons } from "./wicons.js"
 
-menuBtn.addEventListener('click', menuExpand)
+const mainTemp = document.getElementById('temp-cont')
+const weatherIcon = document.getElementById('weather-icon')
+const locationLabel = document.getElementById('location-label')
+const conditionLabel = document.getElementById('description-label')
+const my_key = '0b5318adcd0a934671f220a27030db44'
+const url_forcurrloc = `http://api.openweathermap.org/geo/1.0/direct?q=Port Harcourt,NGA&appid=${my_key}`
 
-const dawn = [6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
-const dusk = [18, 19, 20, 21, 22, 23, 1, 2, 3, 4, 5]
+myGeolocator()
+async function WeatherInfo() {
+    const url_forcurrweather = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${my_key}`
+    const myWeather = await fetch(url_forcurrweather)
+    const myWeatherdata = await myWeather.json()
+    const currTemp = myWeatherdata.main.temp
+    const currTempC = Math.floor(currTemp - 273.15)
+    const currTempF = Math.floor(currTempC * (9/5) -32) 
+    const currname = myWeatherdata.name
+    const curricon = wicons[myWeatherdata.weather[0].icon]
 
-let expanded = 1
-function menuExpand(params) {
-    if (expanded == 1) {
-        navBar.style.cssText="width: 100px"
-        expanded = expanded*-1
-    } else {
-        navBar.style.cssText="width: max-content"
-        expanded = expanded *-1        
-    }
+    locationLabel.innerHTML = `${currname}`
+    conditionLabel.innerHTML = `${myWeatherdata.weather[0].description}`
+    mainTemp.innerHTML = `${currTempC}`
+    weatherIcon.setAttribute("src", `${curricon}`)
 }
 
-// middle.style.background="url('/img/images/night.jpg')"
+setInterval(timeUpdate, 1000)
+WeatherInfo()
 
 
-if (dawn.includes(D)){
-    middle.style.background = "url('/img/images/day.jpg')"
-} else {
-    middle.style.background = "url('/img/images/night.jpg')"
-}  
 
 
-theming()
+
+
 
