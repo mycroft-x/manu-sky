@@ -1,0 +1,142 @@
+/* --white: #ffffffff;
+--celestial-blue: #4997d0ff;
+--cerulean: #007ea7ff;
+--prussian-blue: #003459ff;
+--rich-black: #00171fff; */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    margin: 0;
+    display: flex;
+  }
+#nav-bar{
+    height: 100vh;
+    position: relative;
+    background-color: #ebebeb;
+    min-width: 60px;
+    width: max-content;
+}
+
+#nav-bar > ul > li{
+    list-style-type: none;
+    width: 100%;
+    text-align: center;
+}
+
+#menu-btn{
+    text-align: center;
+    padding: 6px;
+}
+#nav-image{
+    width: 30px;
+    height: 30px ;
+}
+#menu-image{
+    width: 20px;
+    height: 20px ;
+}
+#home-btn{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    width: 100%;
+}
+#search-btn{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#settings-btn{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: absolute;
+    bottom: 20px;
+}
+#content{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#home{
+    width: 63vw;
+    height: calc(5/7 * 100vh);
+    display: flex;
+    flex-direction: column;
+}
+#home-info{
+    height: calc(1/6 *100%);
+    background-color: #ebebeb;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    display: flex;
+}
+#home-middle{
+    height: calc(3.5/6 *100%);
+}
+#home-forecast{
+    background-color: #ebebeb;
+    height: calc(1.6/6 *100%);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+#info-part-1{
+    display: flex;
+    width: calc(3/8 *100%);
+    align-items: center;
+}
+#info-part-2{
+    width: calc(2/8 *100%);
+    font-size: small;
+    padding: 10px;
+}
+#info-part-3{
+    width: calc(3/8 *100%);
+    text-align: center;
+    padding: 10px;
+}
+#weather-icon{
+    width: 25%;
+    height: fit-content;
+    padding-left: 10px;
+}
+#temp-cont{
+    padding-left: 10px;
+    font-size: 40px;
+}
+#description-label, #time-label{
+    font-size: small;
+}
+#cof{
+    display: flex;
+    margin-bottom: 30px;
+    margin-left: 10px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.cofb{
+    background-color: #333;
+    color: #ccc;
+    padding: 0px 10px;
+}
+.cofb:hover{
+    background-color: #444444;
+}
+.active{
+    background-color: #222;
+    color: #ebebeb;
+}
+.active:hover{
+    background-color: #111;
+    color: #ebebeb;
+}
+
+
+
+

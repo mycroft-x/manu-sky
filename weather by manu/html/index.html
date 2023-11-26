@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/index.css">
+    <title>Weather By Manu</title>
+</head>
+<body>
+    <nav id="nav-bar">
+        <ul id="navbar-items">
+            <li id="menu-btn"><img id="menu-image" alt="" src="/img/images/menu.png"></</li>
+            <li id="home-btn"><img id="nav-image" alt="" src="/img/images/home.png"><span></span></li>
+            <li id="search-btn"><img id="nav-image" src="/img/images/search.png"></li>
+            <li id="settings-btn"><img id="nav-image" src="/img/images/settings.png"></li>
+        </ul>
+    </nav>
+    <section id="content">
+        <div id="home">
+            <div id="home-info">
+                <div id="info-part-1">
+                    <img id="weather-icon"/>
+                    <div id="temp-cont"></div>
+                    <div id="cof">
+                        <button id="c-b" class="active cofb">°C</button>
+                        <button id="f-b" class="cofb">°F</button>
+                    </div>
+                </div>
+                <div id="info-part-2">
+                    <div id="pressure-label"> Pressure: <span id="pressure"></span> hpA</div>
+                    <div id="humidity-label"> Humidity: <span id="humidity"></span> %</div>
+                    <div id="wind-label"> Wind Speed: <span id="wind"></span> mph</div>
+                </div>
+                <div id="info-part-3">
+                    <div id="location-label"></div>
+                    <div id="time-label"><span id="day"></span><span id="time"></span></div>
+                    <div id="description-label"></div>
+                </div>
+            </div>
+            <div id="home-middle"></div>
+            <div id="home-forecast"></div>
+        </div>
+    </section>
+</body>
+<script type="module" src="/js/timings.js"></script>
+<script type="module" src="/js/index.js"></script>
+<script type="module" src="/js/theming.js"></script>
+<script type="module" src="/js/nav-bar.js"></script>
+<script type="module" src="/js/locator.js"></script>
+<script type="module" src="/js/wicons.js"></script>
+</html>

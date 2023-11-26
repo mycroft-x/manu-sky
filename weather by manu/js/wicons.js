@@ -1,0 +1,20 @@
+export const wicons = {
+    "01d": "/img/wicons/sun.png",
+    "01n": "/img/wicons/moon.png",
+    "02d": "/img/wicons/sun+cloud.png",
+    "02n": "/img/wicons/moon+cloud.png",
+    "03d": "/img/wicons/sun+cloud.png",
+    "03n": "/img/wicons/moon+cloud.png",
+    "04d": "/img/wicons/clouds.png",
+    "04n": "/img/wicons/clouds.png",
+    "09d": "/img/wicons/heavy rain.png",
+    "09n": "/img/wicons/heavy rain.png",
+    "10d": "/img/wicons/sun+rain.png",
+    "10n": "/img/wicons/moon+rain.png",
+    "11d": "/img/wicons/rain+thunder.png",
+    "11n": "/img/wicons/rain+thunder.png",
+    "13d": "/img/wicons/snow.png",
+    "13n": "/img/wicons/snow.png",
+    "50d": "/img/wicons/cloud+haze.png",
+    "50n": "/img/wicons/cloud+haze.png"
+}
