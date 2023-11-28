@@ -1,35 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/index.css">
     <title>Weather By Manu</title>
+    <script type="module" src="/js/mainWeather.js"></script>
+    <script type="module" src="/js/wicons.js"></script>
+    <script type="module" src="/js/forecastMainWeather.js"></script>
+    <script type="module" src="/js/cof.js"></script>
+    <script type="module" src="/js/locator.js"></script>
+    <script type="module" src="/js/timings.js"></script>
+    <script type="module" src="/js/nav-bar.js"></script>
+    <script type="module" src="/js/theming.js"></script>
+    <script type="module" src="/js/index.js"></script>
 </head>
+
 <body>
     <nav id="nav-bar">
-        <ul id="navbar-items">
-            <li id="menu-btn"><img id="menu-image" alt="" src="/img/images/menu.png"></</li>
-            <li id="home-btn"><img id="nav-image" alt="" src="/img/images/home.png"><span></span></li>
-            <li id="search-btn"><img id="nav-image" src="/img/images/search.png"></li>
-            <li id="settings-btn"><img id="nav-image" src="/img/images/settings.png"></li>
-        </ul>
+        <li id="menu-btn" class="nav-items">
+            <img class="nav-image" id="menu-image" alt="" src="/img/images/menu.png">
+            <span class="for-expand" hidden> Menu</span></li> 
+        <div id="hNs">
+            <li id="home-btn" class="nav-items">
+                <a href="/html/index.html">
+                    <img class="nav-image" alt="" src="/img/images/home.png">
+                    <span class="for-expand" hidden> Home</span>
+                </a>
+            </li>
+            <li id="search-btn" class="nav-items">
+                <a href="/html/search.html">
+                    <img class="nav-image" src="/img/images/search.png"> 
+                    <span class="for-expand" hidden> Search</span>
+                </a>
+            </li>
+        </div>
+        <div id="pNs">
+            <li id="profile-btn" class="nav-items">
+                <a href="/html/user.html">
+                    <img class="nav-image" src="/img/images/profile-user.png"> 
+                    <span class="for-expand" hidden> Profile</span>
+                </a>
+            </li>
+            <li id="settings-btn" class="nav-items">
+                <a href="/html/settings.html">
+                    <img class="nav-image" src="/img/images/settings.png"> 
+                    <span class="for-expand" hidden> Settings</span>
+                </a>
+            </li>
+        </div>
     </nav>
     <section id="content">
         <div id="home">
             <div id="home-info">
                 <div id="info-part-1">
-                    <img id="weather-icon"/>
-                    <div id="temp-cont"></div>
-                    <div id="cof">
-                        <button id="c-b" class="active cofb">°C</button>
-                        <button id="f-b" class="cofb">°F</button>
+                    <div id="weather-icon-cont">
+                        <img id="weather-icon" />
+                    </div>
+                    <div id="main-temp-cont">
+                        <div id="temp-cont"></div>
+                        <div id="cof">
+                            <button id="c-b" class="active cofb">°C</button>
+                            <button id="f-b" class="cofb">°F</button>
+                        </div>
                     </div>
                 </div>
                 <div id="info-part-2">
-                    <div id="pressure-label"> Pressure: <span id="pressure"></span> hpA</div>
-                    <div id="humidity-label"> Humidity: <span id="humidity"></span> %</div>
-                    <div id="wind-label"> Wind Speed: <span id="wind"></span> mph</div>
+                    <div id="pressure-label"> Pressure: <span id="pressure"></span> hPa</div>
+                    <div id="humidity-label"> Humidity: <span id="humidity"></span> % </div>
+                    <div id="wind-label"> Wind Speed: <span id="wind"></span> </div>
                 </div>
                 <div id="info-part-3">
                     <div id="location-label"></div>
@@ -40,62 +80,60 @@
             <div id="home-middle"></div>
             <div id="home-forecast">
                 <div class="forecast-days" id="today">
-                    <div class="dayOftheWeek" id="daylabel0"></div>
-                    <div class="dayicons" id="dayicon0"></div>
-                    <div class="minmax" id="minmax0">
-                        <span ></span>|
-                        <span></span>
+                    <div class="dayOftheWeek" id="daylabel0"> Today </div>
+                    <div class="dayiconscont">
+                        <img class="dayicons" id="dayicon0" />
                     </div>
+                    <div class="minmax" id="minmax0"></div>
                 </div>
                 <div class="forecast-days" id="day-one">
                     <div class="dayOftheWeek" id="daylabel1"></div>
-                    <div class="dayicons" id="dayicon1"></div>
-                    <div class="minmax" id="minmax1">
-                        <span ></span>|
-                        <span></span>
+                    <div class="dayiconscont">
+                        <img class="dayicons" id="dayicon1" />
                     </div>
+                    <div class="minmax" id="minmax1"></div>
                 </div>
                 <div class="forecast-days" id="day-two">
                     <div class="dayOftheWeek" id="daylabel2"></div>
-                    <div class="dayicons" id="dayicon2"></div>
-                    <div class="minmax" id="minmax2">
-                        <span ></span>|
-                        <span></span>
+                    <div class="dayiconscont">
+                        <img class="dayicons" id="dayicon2" />
                     </div>
+                    <div class="minmax" id="minmax2"></div>
                 </div>
                 <div class="forecast-days" id="day-three">
                     <div class="dayOftheWeek" id="daylabel3"></div>
-                    <div class="dayicons" id="dayicon3"></div>
-                    <div class="minmax" id="minmax3">
-                        <span ></span>|
-                        <span></span>
+                    <div class="dayiconscont">
+                        <img class="dayicons" id="dayicon3" />
                     </div>
+                    <div class="minmax" id="minmax3"></div>
                 </div>
                 <div class="forecast-days" id="day-four">
                     <div class="dayOftheWeek" id="daylabel4"></div>
-                    <div class="dayicons" id="dayicon4"></div>
-                    <div class="minmax" id="minmax4">
-                        <span ></span>|
-                        <span></span>
+                    <div class="dayiconscont">
+                        <img class="dayicons" id="dayicon4" />
                     </div>
+                    <div class="minmax" id="minmax4"></div>
                 </div>
                 <div class="forecast-days" id="day-five">
                     <div class="dayOftheWeek" id="daylabel5"></div>
-                    <div class="dayicons" id="dayicon5"></div>
-                    <div class="minmax" id="minmax5">
-                        <span ></span>|
-                        <span></span>
+                    <div class="dayiconscont">
+                        <img class="dayicons" id="dayicon5" />
                     </div>
+                    <div class="minmax" id="minmax5"></div>
                 </div>
             </div>
         </div>
     </section>
 </body>
-<script type="module" src="/js/timings.js"></script>
-<script type="module" src="/js/index.js"></script>
-<script type="module" src="/js/theming.js"></script>
-<script type="module" src="/js/nav-bar.js"></script>
-<script type="module" src="/js/locator.js"></script>
+
+<!-- <script type="module" src="/js/mainWeather.js"></script>
 <script type="module" src="/js/wicons.js"></script>
-<script type="module" src="/js/mainWeather.js"></script>
+<script type="module" src="/js/forecastMainWeather.js"></script>
+<script type="module" src="/js/cof.js"></script>
+<script type="module" src="/js/locator.js"></script>
+<script type="module" src="/js/timings.js"></script>
+<script type="module" src="/js/nav-bar.js"></script>
+<script type="module" src="/js/theming.js"></script>
+<script type="module" src="/js/index.js"></script> -->
+
 </html>
