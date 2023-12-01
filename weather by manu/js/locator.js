@@ -9,7 +9,6 @@ let lat
                 (position) => {
                     lat = position.coords.latitude;
                     long = position.coords.longitude;
-                    console.log(lat, long);
                     resolve({ lat, long });
                 },
                 (error) => {
