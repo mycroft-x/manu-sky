@@ -10,5 +10,3 @@ export function theming(params) {
         middle.style.backgroundSize = "cover"
     }  
 }
-
-theming()
