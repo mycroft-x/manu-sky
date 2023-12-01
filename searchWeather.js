@@ -21,11 +21,11 @@ export let searchcurrTempC
 export let searchcurrTempF
 
 export async function searchWeatherInfo(searchVal) {
-    const url_forsearchloc = `http://api.openweathermap.org/geo/1.0/direct?q=${searchVal},NGA&appid=${my_key}`;
+    const url_forsearchloc = `https://api.openweathermap.org/geo/1.0/direct?q=${searchVal},NGA&appid=${my_key}`;
     const searchloc = await fetch(url_forsearchloc);
     const searchlocdata = await searchloc.json();
 
-    const url_forsearchweather = `http://api.openweathermap.org/data/2.5/weather?lat=${searchlocdata[0].lat}&lon=${searchlocdata[0].lon}&appid=${my_key}`;
+    const url_forsearchweather = `https://api.openweathermap.org/data/2.5/weather?lat=${searchlocdata[0].lat}&lon=${searchlocdata[0].lon}&appid=${my_key}`;
     const searchWeather = await fetch(url_forsearchweather);
     const searchWeatherdata = await searchWeather.json();
     const searchname = searchWeatherdata.name;
@@ -36,7 +36,7 @@ export async function searchWeatherInfo(searchVal) {
     searchcurrTempC = Math.floor(searchcurrTemp - 273.15);
     searchcurrTempF = Math.floor(searchcurrTempC * (9 / 5) + 32);
 
-    const url_searchforecast = `http://api.openweathermap.org/data/2.5/forecast?lat=${searchlocdata[0].lat}&lon=${searchlocdata[0].lon}&cnt=40&appid=${my_key}`;
+    const url_searchforecast = `https://api.openweathermap.org/data/2.5/forecast?lat=${searchlocdata[0].lat}&lon=${searchlocdata[0].lon}&cnt=40&appid=${my_key}`;
     const searchforecast = await fetch(url_searchforecast);
     const searchforecastdata = await searchforecast.json();
     const searchforecast_iconcodes = []

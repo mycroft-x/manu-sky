@@ -10,7 +10,7 @@ const windLabel = document.getElementById("wind")
 const humidityLabel = document.getElementById("humidity")
 
 export const my_key = "0b5318adcd0a934671f220a27030db44";
-const url_forcurrloc = `http://api.openweathermap.org/geo/1.0/direct?q=Eliozu,NGA&appid=${my_key}`;
+const url_forcurrloc = `https://api.openweathermap.org/geo/1.0/direct?q=Eliozu,NGA&appid=${my_key}`;
 export let currTempC
 export let currTempF
 export let windSpeed
@@ -30,7 +30,7 @@ export async function WeatherInfo() {
   const { lat, long } = await myGeolocator();
   const currloc = await fetch(url_forcurrloc);
   const currlocdata = await currloc.json();
-  const url_forcurrweather = `http://api.openweathermap.org/data/2.5/weather?lat=${currlocdata[0].lat}&lon=${currlocdata[0].lon}&appid=${my_key}`;
+  const url_forcurrweather = `https://api.openweathermap.org/data/2.5/weather?lat=${currlocdata[0].lat}&lon=${currlocdata[0].lon}&appid=${my_key}`;
   const myWeather = await fetch(url_forcurrweather);
   const myWeatherdata = await myWeather.json();
   const currname = myWeatherdata.name;
@@ -40,7 +40,7 @@ export async function WeatherInfo() {
   currTempC = Math.floor(currTemp - 273.15);
   currTempF = Math.floor(currTempC * (9/5) + 32);
 
-  const url_currforecast = `http://api.openweathermap.org/data/2.5/forecast?lat=${currlocdata[0].lat}&lon=${currlocdata[0].lon}&cnt=40&appid=${my_key}`;
+  const url_currforecast = `https://api.openweathermap.org/data/2.5/forecast?lat=${currlocdata[0].lat}&lon=${currlocdata[0].lon}&cnt=40&appid=${my_key}`;
   const forecast = await fetch(url_currforecast);
   const forecastdata = await forecast.json();
 
