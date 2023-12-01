@@ -8,5 +8,6 @@ export function theming(params) {
     }else if (dusk.includes(currTime.getHours()) == true){
         middle.style.backgroundImage = "url('night.jpeg')"
         middle.style.backgroundSize = "cover"
+        
     }  
 }
