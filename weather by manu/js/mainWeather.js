@@ -9,11 +9,22 @@ const pressureLabel = document.getElementById("pressure")
 const windLabel = document.getElementById("wind")
 const humidityLabel = document.getElementById("humidity")
 
-const my_key = "0b5318adcd0a934671f220a27030db44";
+export const my_key = "0b5318adcd0a934671f220a27030db44";
 const url_forcurrloc = `http://api.openweathermap.org/geo/1.0/direct?q=Eliozu,NGA&appid=${my_key}`;
 export let currTempC
 export let currTempF
 export let windSpeed
+
+export function initialCap(str) {
+  str = str.split(" ");
+  let newWord = ''
+  str.forEach(word => {
+      word = `${word[0].toUpperCase() + word.slice(1)} `
+      newWord += word
+  });
+  return newWord
+}
+
 
 export async function WeatherInfo() {
   const { lat, long } = await myGeolocator();
@@ -50,7 +61,7 @@ export async function WeatherInfo() {
   }
 
   locationLabel.innerHTML = `${currname}`;
-  conditionLabel.innerHTML = `${myWeatherdata.weather[0].description}`;
+  conditionLabel.innerHTML = initialCap(myWeatherdata.weather[0].description);
   pressureLabel.innerText = `${myWeatherdata.main.pressure}`;
   humidityLabel.innerText = `${myWeatherdata.main.humidity}`;
   windLabel.innerText = `${windSpeed[0]}`;
