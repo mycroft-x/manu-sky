@@ -1,4 +1,4 @@
-const viewportWidth = window.innerWidth
+var viewportWidth = window.innerWidth
 
 export function isBig() {
     if (viewportWidth <= 820) {

@@ -1,12 +1,12 @@
 import { currTempC, currTempF, windSpeed } from "./mainWeather.js";
 import { searchcurrTempC, searchcurrTempF } from './searchWeather.js';
-const mainTemp = document.getElementById("temp-cont");
-const celsiusBtn = document.getElementById('c-b')
-const fahrenheitBtn = document.getElementById('f-b')
-const searchCelsiusBtn = document.getElementById('search-c-b')
-const searchFahrenheitBtn = document.getElementById('search-f-b')
-const windLabel = document.getElementById("wind")
-const searchTemp = document.getElementById('search-temp-cont')
+var mainTemp = document.getElementById("temp-cont");
+var celsiusBtn = document.getElementById('c-b')
+var fahrenheitBtn = document.getElementById('f-b')
+var searchCelsiusBtn = document.getElementById('search-c-b')
+var searchFahrenheitBtn = document.getElementById('search-f-b')
+var windLabel = document.getElementById("wind")
+var searchTemp = document.getElementById('search-temp-cont')
 
 
 celsiusBtn.addEventListener('click', () => {
