@@ -1,4 +1,4 @@
-import cities from './jsonviewer.json' assert {type: 'json'};
+import cities from '../jsonviewer.json' assert {type: 'json'};
 import { searchWeatherInfo } from "./searchWeather.js";
 const searchbar = document.getElementById('search-bar')
 // const dropdownContainer = document.getElementById('searchDropdown');
