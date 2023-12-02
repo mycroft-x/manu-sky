@@ -1,27 +1,10 @@
-let long
-let lat
+const url = 'https://ipgeolocation.abstractapi.com/v1/?api_key=092d2e0de1a74b5588891afd20b2188a'
 
- export function myGeolocator() {
-    const userLocation = navigator.geolocation;
-    return new Promise((resolve, reject) => {
-        if (userLocation) {
-            userLocation.getCurrentPosition(
-                (position) => {
-                    lat = position.coords.latitude;
-                    long = position.coords.longitude;
-                    resolve({ lat, long });
-                },
-                (error) => {
-                    reject(error);
-                }
-            );
-        } else {
-            reject(new Error('Geolocation is not supported.'));
-        }
-    });
+export async function myGeolocator() {
+    const iploc = await fetch(url)
+    const iplocdata = await iploc.json()
+    const lat = iplocdata.latitude
+    const lon  = iplocdata.longitude
+    console.log(lat, lon);
+    return { lat, lon }
 }
- export function success(data) {
-    lat = data.coords.latitude
-    long = data.coords.longitude
-    return {lat, long};
- }
