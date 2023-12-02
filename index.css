@@ -13,7 +13,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    overflow: hidden;
+    overflow-y: scroll;
     font-size: 1.5vh;
     list-style: none;
     text-decoration: none;
@@ -22,6 +22,7 @@
 body {
     margin: 0;
     display: flex;
+    overflow-y: scroll;
 }
 
 #nav-bar {
