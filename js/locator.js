@@ -1,4 +1,4 @@
-var url = 'https://ipgeolocation.abstractapi.com/v1/?api_key=092d2e0de1a74b5588891afd20b2188a'
+var url = 'https://api.ipdata.co?api-key=4f3b186a99cc82d92bf2ddda3b74db56fa27ec0fb53be7ecea65ef15'
 
 export async function myGeolocator() {
     var iploc = await fetch(url)

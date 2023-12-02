@@ -107,6 +107,7 @@ body {
 
 #home,
 #search {
+    display: flex;
     width: 63vw;
     height: calc(5/7 * 100vh);
     flex-direction: column;
