@@ -16,6 +16,9 @@ const searchforecastdayIcons = Array(
 )
 const searchForecast = document.getElementById("search-forecast");
 const searchDayLabels = document.getElementById("search-day-labels");
+function n(n) {
+    return n > 9 ? `${n}` : `0${n}`;
+}
 export var searchcurrTempC
 export var searchcurrTempF
 export async function searchWeatherInfo(searchVal) {
@@ -48,7 +51,7 @@ export async function searchWeatherInfo(searchVal) {
         searchDescLabel.innerText = initialCap(searchWeatherdata.weather[0].description);
         function getSearchTime() {
             const shiftedTimestamp = new Date((Date.now() - 3600000) + searchShiftInSecs * 1000);
-            searchTimeLabel.innerText = `${daysOfWeek[shiftedTimestamp.getDay()]}  ${shiftedTimestamp.getHours()}:${shiftedTimestamp.getMinutes()}`
+            searchTimeLabel.innerText = `${daysOfWeek[shiftedTimestamp.getDay()]}  ${n(shiftedTimestamp.getHours())}:${n(shiftedTimestamp.getMinutes())}`
         }
         getSearchTime()
         setInterval(getSearchTime, 1000);
