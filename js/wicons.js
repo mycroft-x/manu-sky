@@ -1,4 +1,4 @@
-export var wicons = {
+export const wicons = {
     "01d": "wicons/sun.png",
     "01n": "wicons/moon.png",
     "02d": "wicons/sun+cloud.png",

@@ -1,48 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords"
         content="manu manuchi manuchimso weather manusky manu-sky github weatherbymanu skymanu sky manu">
     <meta name="description" content="A website that displays the weather">
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="search.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/search.css">
     <title>Weather By Manu</title>
-
 </head>
-
 <body>
     <nav id="nav-bar">
-        <li id="menu-btn" class="nav-items">
-
+        <div id="menu-btn" class="nav-items">
             <img class="nav-image" id="menu-image" alt="" src="menu.jpeg">
             <span class="for-expand" id="nav-title" hidden> Weather By Manu</span>
-
-        </li>
+        </div>
 
         <div id="hNs">
-            <li id="home-btn" class="nav-items">
+            <div id="home-btn" class="nav-items">
                 <a>
-                    <img class="nav-image" alt="" src="home.jpeg">
+                    <img class="nav-image" alt="home.jpeg" src="home.jpeg">
                     <span class="for-expand" hidden> Home</span>
                 </a>
-            </li>
-            <li id="search-btn" class="nav-items">
+            </div>
+            <div id="search-btn" class="nav-items">
                 <a>
-                    <img class="nav-image" src="search.jpeg">
+                    <img alt="search.jpeg" class="nav-image" src="search.jpeg">
                     <span class="for-expand" hidden> Search</span>
                 </a>
-            </li>
+            </div>
         </div>
         <div id="pNs">
-            <li id="profile-btn" class="nav-items">
+            <div id="profile-btn" class="nav-items">
                 <a>
-                    <img class="nav-image" src="profile-user.jpeg">
+                    <img class="nav-image" alt="more-soon.jpeg" src="profile-user.jpeg">
                     <span class="for-expand" hidden>More soon...</span>
                 </a>
-            </li>
+            </div>
         </div>
     </nav>
     <section id="content">
@@ -51,7 +46,7 @@
                 <div id="home-info">
                     <div id="info-part-1">
                         <div id="weather-icon-cont">
-                            <img id="weather-icon" />
+                            <img alt="current-weather-icon" id="weather-icon" />
                         </div>
                         <div id="main-temp-cont">
                             <div id="temp-cont"></div>
@@ -77,42 +72,42 @@
                     <div class="forecast-days" id="today">
                         <div class="dayOftheWeek" id="daylabel0"> Today </div>
                         <div class="dayiconscont">
-                            <img class="dayicons" id="dayicon0" />
+                            <img alt="today-icon" class="dayicons" id="dayicon0" />
                         </div>
                         <div class="minmax" id="minmax0"></div>
                     </div>
                     <div class="forecast-days" id="day-one">
                         <div class="dayOftheWeek" id="daylabel1"></div>
                         <div class="dayiconscont">
-                            <img class="dayicons" id="dayicon1" />
+                            <img alt="day-icon" class="dayicons" id="dayicon1" />
                         </div>
                         <div class="minmax" id="minmax1"></div>
                     </div>
                     <div class="forecast-days" id="day-two">
                         <div class="dayOftheWeek" id="daylabel2"></div>
                         <div class="dayiconscont">
-                            <img class="dayicons" id="dayicon2" />
+                            <img alt="day-icon" class="dayicons" id="dayicon2" />
                         </div>
                         <div class="minmax" id="minmax2"></div>
                     </div>
                     <div class="forecast-days" id="day-three">
                         <div class="dayOftheWeek" id="daylabel3"></div>
                         <div class="dayiconscont">
-                            <img class="dayicons" id="dayicon3" />
+                            <img alt="day-icon" class="dayicons" id="dayicon3" />
                         </div>
                         <div class="minmax" id="minmax3"></div>
                     </div>
                     <div class="forecast-days" id="day-four">
                         <div class="dayOftheWeek" id="daylabel4"></div>
                         <div class="dayiconscont">
-                            <img class="dayicons" id="dayicon4" />
+                            <img alt="day-icon" class="dayicons" id="dayicon4" />
                         </div>
                         <div class="minmax" id="minmax4"></div>
                     </div>
                     <div class="forecast-days" id="day-five">
                         <div class="dayOftheWeek" id="daylabel5"></div>
                         <div class="dayiconscont">
-                            <img class="dayicons" id="dayicon5" />
+                            <img alt="day-icon" class="dayicons" id="dayicon5" />
                         </div>
                         <div class="minmax" id="minmax5"></div>
                     </div>
@@ -147,49 +142,41 @@
                         </div>
                     </div>
                     <br>
-                    <!-- <div id="search-day-labels">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div> -->
                     <div id="search-forecast">
                         <div class="forecast-searchdays" id="today">
                             <div class="searchdayOftheWeek" id="searchdaylabel0"> Today </div>
                             <div class="searchdayiconscont">
-                                <img class="searchdayicons" id="searchdayicon0" />
+                                <img class="searchdayicons" alt="" id="searchdayicon0" />
                             </div>
                         </div>
                         <div class="forecast-searchdays" id="searchday-one">
                             <div class="searchdayOftheWeek" id="searchdaylabel1"></div>
                             <div class="searchdayiconscont">
-                                <img class="searchdayicons" id="searchdayicon1" />
+                                <img alt="" class="searchdayicons" id="searchdayicon1" />
                             </div>
                         </div>
                         <div class="forecast-searchdays" id="searchday-two">
                             <div class="searchdayOftheWeek" id="searchdaylabel2"></div>
                             <div class="searchdayiconscont">
-                                <img class="searchdayicons" id="searchdayicon2" />
+                                <img alt="" class="searchdayicons" id="searchdayicon2" />
                             </div>
                         </div>
                         <div class="forecast-searchdays" id="searchday-three">
                             <div class="searchdayOftheWeek" id="searchdaylabel3"></div>
                             <div class="searchdayiconscont">
-                                <img class="searchdayicons" id="searchdayicon3" />
+                                <img alt="" class="searchdayicons" id="searchdayicon3" />
                             </div>
                         </div>
                         <div class="forecast-searchdays" id="searchday-four">
                             <div class="searchdayOftheWeek" id="searchdaylabel4"></div>
                             <div class="searchdayiconscont">
-                                <img class="searchdayicons" id="searchdayicon4" />
+                                <img alt="" class="searchdayicons" id="searchdayicon4" />
                             </div>
                         </div>
                         <div class="forecast-searchdays" id="searchday-five">
                             <div class="searchdayOftheWeek" id="searchdaylabel5"></div>
                             <div class="searchdayiconscont">
-                                <img class="searchdayicons" id="searchdayicon5" />
+                                <img alt="" class="searchdayicons" id="searchdayicon5" />
                             </div>
                         </div>
                     </div>
@@ -197,11 +184,8 @@
                 <!-- </div> -->
             </div>
         </div>
-
     </section>
-
 </body>
-
 <script type="module" src="js/searchWeather.js"></script>
 <script type="module" src="js/searchbar.js"></script>
 <script type="module" src="js/mainWeather.js"></script>
@@ -213,5 +197,4 @@
 <script type="module" src="js/nav-bar.js"></script>
 <script type="module" src="js/theming.js"></script>
 <script type="module" src="js/index.js"></script>
-
 </html>

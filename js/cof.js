@@ -7,8 +7,6 @@ var searchCelsiusBtn = document.getElementById('search-c-b')
 var searchFahrenheitBtn = document.getElementById('search-f-b')
 var windLabel = document.getElementById("wind")
 var searchTemp = document.getElementById('search-temp-cont')
-
-
 celsiusBtn.addEventListener('click', () => {
         switchUnits(celsiusBtn, fahrenheitBtn);
     })
@@ -21,7 +19,6 @@ searchCelsiusBtn.addEventListener('click', () => {
 searchFahrenheitBtn.addEventListener('click', () => {
         switchSearchUnits(searchFahrenheitBtn, searchCelsiusBtn);
     })
-
 async function switchUnits(clickedBtn, otherBtn) {
     clickedBtn.classList.add('active');
     otherBtn.classList.remove('active');
@@ -34,7 +31,6 @@ async function switchUnits(clickedBtn, otherBtn) {
         windLabel.innerText = `${windSpeed[1]}`
     }
 }
-
 async function switchSearchUnits(clickedBtn, otherBtn) {
     clickedBtn.classList.add('active');
     otherBtn.classList.remove('active');

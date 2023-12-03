@@ -22,7 +22,6 @@
 body {
     margin: 0;
     display: flex;
-    overflow-y: scroll;
 }
 
 #nav-bar {
@@ -104,13 +103,21 @@ body {
     justify-content: center;
     align-items: center;
 }
-
+#background-small{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 #home,
 #search {
-    display: flex;
     width: 63vw;
     height: calc(5/7 * 100vh);
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
+    display: flex;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -119,22 +126,24 @@ body {
 }
 
 #home-info {
-    height: calc(1/6 *100%);
+    height: calc(1.4/6 *100%);
+    width: 100%;
     background-color: var(--planned);
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     flex-direction: row;
-    justify-content: space-between;
     display: flex;
 }
 
 #home-middle {
-    height: calc(3.5/6 *100%);
+    height: calc(3.5/6 * 100%);
+    width: 100%;
 }
 
 #home-forecast {
     background-color: var(--white);
-    height: calc(1.6/6 *100%);
+    height: calc(1.6/6 * 100%);
+    width: 100%;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
     display: flex;
@@ -264,9 +273,7 @@ body {
         #nav-bar {
             height: 7vh;
             display: flex;
-            /* position: relative; */
             background-color: var(--white);
-            /* min-width: 60px; */
             width: 100vw;
             justify-content: flex-end;
             box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.2);
