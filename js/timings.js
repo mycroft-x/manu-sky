@@ -9,7 +9,7 @@ export const currTime = new Date()
 export const dawn = [6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
 export const dusk = [18, 19, 20, 21, 22, 23, 1, 2, 3, 4, 5, 0]
 export function isBig() {
-    if (window.innerWidth <= 820) {
+    if (window.innerWidth <= 821) {
         return false
     } else {
         return true

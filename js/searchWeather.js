@@ -70,6 +70,24 @@ export async function searchWeatherInfo(searchVal) {
             cnt++
         }
     }
+    function getLocalTime(lat, long) {
+        const utcDate = new Date();
+        const timeZoneOffset = new Date().getTimezoneOffset() / 60;
+        const localTime = new Date(utcDate.getTime() + timeZoneOffset * 60 * 60 * 1000);
+        const options = {
+            timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+            hour: 'numeric',
+            minute: 'numeric',
+            second: 'numeric',
+            hour12: false,
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+        };
+        const localTimeString = localTime.toLocaleString(undefined, options);
+        return localTimeString;
+    }
     document.getElementById('searchdayicon0').setAttribute("src", `${searchicon}`);
     searchweatherForecast()
     return { searchcurrTempC, searchcurrTempF }

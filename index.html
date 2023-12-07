@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,183 +11,191 @@
     <link rel="stylesheet" href="css/search.css">
     <title>Weather By Manu</title>
 </head>
+
 <body id="body">
-    <nav id="nav-bar">
-        <div id="menu-btn" class="nav-items">
-            <span class="for-expand" id="nav-title"> Weather By Manu</span>
-            <span class="for-expandm for-expands" id="home-small" hidden> Home</span>
-            <span class="for-expandm for-expands" id="search-small" hidden> Search</span>
-            <img class="nav-image" id="menu-image" alt="" src="menu.jpeg">
-        </div>
-
-        <div id="hNs">
-            <div id="home-btn" class="nav-items">
-                <a>
-                    <img class="nav-image" alt="home.jpeg" src="home.jpeg">
-                    <span class="for-expand" hidden> Home</span>
-                </a>
-            </div>
-            <div id="search-btn" class="nav-items">
-                <a>
-                    <img alt="search.jpeg" class="nav-image" src="search.jpeg">
-                    <span class="for-expand" hidden> Search</span>
-                </a>
-            </div>
-        </div>
-        <div id="pNs">
-            <div id="profile-btn" class="nav-items">
-                <a>
-                    <img class="nav-image" alt="more-soon.jpeg" src="profile-user.jpeg">
-                    <span class="for-expand" hidden>More soon...</span>
-                </a>
-            </div>
-        </div>
-    </nav>
-    <section id="content">
-        <div id="background-small">
-            <div id="home">
-                <div id="home-info">
-                    <div id="info-part-1">
-                        <div id="weather-icon-cont">
-                            <img alt="current-weather-icon" id="weather-icon" />
+    <div id="everything">
+        <nav id="nav-bar">
+            <div id="main-title"> Weather By Manu </div>
+            <ul id="nav-btns">
+                <li id="home-btn" class="nav-items">
+                    Home
+                </li>
+                <li id="nav-search" class="nav-items">
+                    <input type="text" id="nav-searchbar" placeholder="Search or enter an address">
+                    <div id="nav-search-info-cont" class="tooltip">
+                        <img src="/images/info.svg" class="info" id="nav-searchbar-info" alt="i">
+                        <div id="nav-searchbar-info-div">
+                            not everything is in here
                         </div>
-                        <div id="main-temp-cont">
-                            <div id="temp-cont"></div>
-                            <div id="cof">
-                                <button id="c-b" class="active cofb">°C</button>
-                                <button id="f-b" class="cofb">°F</button>
+                    </div>
+                </li>
+                <li id="nav-search-small">
+                    <img id= "nav-search-icon"src="/images/search.svg" alt="search icon">
+                    <div id="expand-search">
+                        <input type="text" id="alt-nav-searchbar" placeholder="London maybe...">
+                        <div id="x-ns">X</div>
+                    </div>
+                </li>
+                <li id="profile-btn" class="nav-items">
+                    More Soon...
+                </li>
+            </ul>
+        </nav>
+
+        <section id="content">
+            <div id="background-small">
+                <div id="home">
+                    <div id="home-info">
+                        <div id="info-part-1">
+                            <div id="weather-icon-cont">
+                                <img alt="current-weather-icon" id="weather-icon" />
                             </div>
-                        </div>
-                    </div>
-                    <div id="info-part-2">
-                        <div id="pressure-label"> Pressure: <span id="pressure"></span> hPa</div>
-                        <div id="humidity-label"> Humidity: <span id="humidity"></span> % </div>
-                        <div id="wind-label"> Wind Speed: <span id="wind"></span> </div>
-                    </div>
-                    <div id="info-part-3">
-                        <div id="location-label"></div>
-                        <div id="time-label"><span id="day"></span><span id="time"></span></div>
-                        <div id="description-label"></div>
-                    </div>
-                </div>
-                <div id="home-middle"></div>
-                <div id="home-forecast">
-                    <div class="forecast-days" id="today">
-                        <div class="dayOftheWeek" id="daylabel0"> Today </div>
-                        <div class="dayiconscont">
-                            <img alt="today-icon" class="dayicons" id="dayicon0" />
-                        </div>
-                        <div class="minmax" id="minmax0"></div>
-                    </div>
-                    <div class="forecast-days" id="day-one">
-                        <div class="dayOftheWeek" id="daylabel1"></div>
-                        <div class="dayiconscont">
-                            <img alt="day-icon" class="dayicons" id="dayicon1" />
-                        </div>
-                        <div class="minmax" id="minmax1"></div>
-                    </div>
-                    <div class="forecast-days" id="day-two">
-                        <div class="dayOftheWeek" id="daylabel2"></div>
-                        <div class="dayiconscont">
-                            <img alt="day-icon" class="dayicons" id="dayicon2" />
-                        </div>
-                        <div class="minmax" id="minmax2"></div>
-                    </div>
-                    <div class="forecast-days" id="day-three">
-                        <div class="dayOftheWeek" id="daylabel3"></div>
-                        <div class="dayiconscont">
-                            <img alt="day-icon" class="dayicons" id="dayicon3" />
-                        </div>
-                        <div class="minmax" id="minmax3"></div>
-                    </div>
-                    <div class="forecast-days" id="day-four">
-                        <div class="dayOftheWeek" id="daylabel4"></div>
-                        <div class="dayiconscont">
-                            <img alt="day-icon" class="dayicons" id="dayicon4" />
-                        </div>
-                        <div class="minmax" id="minmax4"></div>
-                    </div>
-                    <div class="forecast-days" id="day-five">
-                        <div class="dayOftheWeek" id="daylabel5"></div>
-                        <div class="dayiconscont">
-                            <img alt="day-icon" class="dayicons" id="dayicon5" />
-                        </div>
-                        <div class="minmax" id="minmax5"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="search">
-                <input type="text" id="search-bar" placeholder="    Search or enter an address">
-                <!-- <div id="searchDropdown"></div> -->
-                <!-- <div id="search-content"> -->
-                <div id="search-info">
-                    <div id="search-main-frame">
-                        <div id="search-mf-part1">
-
-                            <div id="search-weather-icon-cont">
-                                <img id="search-weather-icon" src=" " alt="">
-                            </div>
-
-                            <div id="search-main-temp-cont">
-                                <div id="search-temp-cont"></div>
-                                <div id="search-cof">
-                                    <button id="search-c-b" class="active cofb">°C</button>
-                                    <button id="search-f-b" class="cofb">°F</button>
+                            <div id="main-temp-cont">
+                                <div id="temp-cont"></div>
+                                <div id="cof">
+                                    <button id="c-b" class="active cofb">°C</button>
+                                    <button id="f-b" class="cofb">°F</button>
                                 </div>
                             </div>
-
                         </div>
-                        <div id="search-mf-part2">
-                            <div id="search-location-label"></div>
-                            <div id="search-time-label"></div>
-                            <div id="search-desc-label"></div>
+                        <div id="info-part-2">
+                            <div id="pressure-label"> Pressure: <span id="pressure"></span> hPa</div>
+                            <div id="humidity-label"> Humidity: <span id="humidity"></span> % </div>
+                            <div id="wind-label"> Wind Speed: <span id="wind"></span> </div>
+                        </div>
+                        <div id="info-part-3">
+                            <div id="location-label"></div>
+                            <div id="time-label">
+                                <div id="search-time-info">
+                                    <span id="search-day"></span><span id="search-time"></span>
+                                </div> 
+                                <div>
+                                    <span id="day"></span><span id="time"></span>
+                                </div>
+                            </div>
+                            <div id="description-label"></div>
                         </div>
                     </div>
-                    <br>
-                    <div id="search-forecast">
-                        <div class="forecast-searchdays" id="today">
-                            <div class="searchdayOftheWeek" id="searchdaylabel0"> Today </div>
-                            <div class="searchdayiconscont">
-                                <img class="searchdayicons" alt="" id="searchdayicon0" />
+                    <div id="home-middle"></div>
+                    <div id="home-forecast">
+                        <div class="forecast-days" id="today">
+                            <div class="dayOftheWeek" id="daylabel0"> Today </div>
+                            <div class="dayiconscont">
+                                <img alt="today-icon" class="dayicons" id="dayicon0" />
                             </div>
+                            <div class="minmax" id="minmax0"></div>
                         </div>
-                        <div class="forecast-searchdays" id="searchday-one">
-                            <div class="searchdayOftheWeek" id="searchdaylabel1"></div>
-                            <div class="searchdayiconscont">
-                                <img alt="" class="searchdayicons" id="searchdayicon1" />
+                        <div class="forecast-days" id="day-one">
+                            <div class="dayOftheWeek" id="daylabel1"></div>
+                            <div class="dayiconscont">
+                                <img alt="day-icon" class="dayicons" id="dayicon1" />
                             </div>
+                            <div class="minmax" id="minmax1"></div>
                         </div>
-                        <div class="forecast-searchdays" id="searchday-two">
-                            <div class="searchdayOftheWeek" id="searchdaylabel2"></div>
-                            <div class="searchdayiconscont">
-                                <img alt="" class="searchdayicons" id="searchdayicon2" />
+                        <div class="forecast-days" id="day-two">
+                            <div class="dayOftheWeek" id="daylabel2"></div>
+                            <div class="dayiconscont">
+                                <img alt="day-icon" class="dayicons" id="dayicon2" />
                             </div>
+                            <div class="minmax" id="minmax2"></div>
                         </div>
-                        <div class="forecast-searchdays" id="searchday-three">
-                            <div class="searchdayOftheWeek" id="searchdaylabel3"></div>
-                            <div class="searchdayiconscont">
-                                <img alt="" class="searchdayicons" id="searchdayicon3" />
+                        <div class="forecast-days" id="day-three">
+                            <div class="dayOftheWeek" id="daylabel3"></div>
+                            <div class="dayiconscont">
+                                <img alt="day-icon" class="dayicons" id="dayicon3" />
                             </div>
+                            <div class="minmax" id="minmax3"></div>
                         </div>
-                        <div class="forecast-searchdays" id="searchday-four">
-                            <div class="searchdayOftheWeek" id="searchdaylabel4"></div>
-                            <div class="searchdayiconscont">
-                                <img alt="" class="searchdayicons" id="searchdayicon4" />
+                        <div class="forecast-days" id="day-four">
+                            <div class="dayOftheWeek" id="daylabel4"></div>
+                            <div class="dayiconscont">
+                                <img alt="day-icon" class="dayicons" id="dayicon4" />
                             </div>
+                            <div class="minmax" id="minmax4"></div>
                         </div>
-                        <div class="forecast-searchdays" id="searchday-five">
-                            <div class="searchdayOftheWeek" id="searchdaylabel5"></div>
-                            <div class="searchdayiconscont">
-                                <img alt="" class="searchdayicons" id="searchdayicon5" />
+                        <div class="forecast-days" id="day-five">
+                            <div class="dayOftheWeek" id="daylabel5"></div>
+                            <div class="dayiconscont">
+                                <img alt="day-icon" class="dayicons" id="dayicon5" />
                             </div>
+                            <div class="minmax" id="minmax5"></div>
                         </div>
                     </div>
                 </div>
-                <!-- </div> -->
+
+                <div id="search">
+                    <input type="text" id="search-bar" placeholder="    Search or enter an address">
+                    <!-- <div id="searchDropdown"></div> -->
+                    <!-- <div id="search-content"> -->
+                    <div id="search-info">
+                        <div id="search-main-frame">
+                            <div id="search-mf-part1">
+
+                                <div id="search-weather-icon-cont">
+                                    <img id="search-weather-icon" src=" " alt="">
+                                </div>
+
+                                <div id="search-main-temp-cont">
+                                    <div id="search-temp-cont"></div>
+                                    <div id="search-cof">
+                                        <button id="search-c-b" class="active cofb">°C</button>
+                                        <button id="search-f-b" class="cofb">°F</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div id="search-mf-part2">
+                                <div id="search-location-label"></div>
+                                <div id="search-time-label"></div>
+                                <div id="search-desc-label"></div>
+                            </div>
+                        </div>
+                        <br>
+                        <div id="search-forecast">
+                            <div class="forecast-searchdays" id="today">
+                                <div class="searchdayOftheWeek" id="searchdaylabel0"> Today </div>
+                                <div class="searchdayiconscont">
+                                    <img class="searchdayicons" alt="" id="searchdayicon0" />
+                                </div>
+                            </div>
+                            <div class="forecast-searchdays" id="searchday-one">
+                                <div class="searchdayOftheWeek" id="searchdaylabel1"></div>
+                                <div class="searchdayiconscont">
+                                    <img alt="" class="searchdayicons" id="searchdayicon1" />
+                                </div>
+                            </div>
+                            <div class="forecast-searchdays" id="searchday-two">
+                                <div class="searchdayOftheWeek" id="searchdaylabel2"></div>
+                                <div class="searchdayiconscont">
+                                    <img alt="" class="searchdayicons" id="searchdayicon2" />
+                                </div>
+                            </div>
+                            <div class="forecast-searchdays" id="searchday-three">
+                                <div class="searchdayOftheWeek" id="searchdaylabel3"></div>
+                                <div class="searchdayiconscont">
+                                    <img alt="" class="searchdayicons" id="searchdayicon3" />
+                                </div>
+                            </div>
+                            <div class="forecast-searchdays" id="searchday-four">
+                                <div class="searchdayOftheWeek" id="searchdaylabel4"></div>
+                                <div class="searchdayiconscont">
+                                    <img alt="" class="searchdayicons" id="searchdayicon4" />
+                                </div>
+                            </div>
+                            <div class="forecast-searchdays" id="searchday-five">
+                                <div class="searchdayOftheWeek" id="searchdaylabel5"></div>
+                                <div class="searchdayiconscont">
+                                    <img alt="" class="searchdayicons" id="searchdayicon5" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
+
 </body>
 <script type="module" src="js/searchWeather.js"></script>
 <script type="module" src="js/searchbar.js"></script>
@@ -199,4 +208,5 @@
 <script type="module" src="js/nav-bar.js"></script>
 <script type="module" src="js/theming.js"></script>
 <script type="module" src="js/index.js"></script>
+
 </html>
