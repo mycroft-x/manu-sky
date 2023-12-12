@@ -6,7 +6,7 @@ const navSearchBar = document.getElementById('alt-nav-searchbar')
 const navSearchAlt = document.getElementById('expand-search')
 const navSearchX = document.getElementById('x-ns')
 
-navSearchBtn.addEventListener('click', function() {
+navSearchBtn.addEventListener('click', function () {
     navSearchBtn.style.display = 'none'
     navSearchAlt.style.display = 'flex'
 })
@@ -23,10 +23,16 @@ navSearchX.addEventListener('click', function () {
     navSearchAlt.style.display = 'none'
     navSearchX.style.display = 'none';
 });
-
+mainnavSearchBar.addEventListener('keydown', (event) => handleEnterKey(event))
 navSearchBar.addEventListener('keydown', (event) => handleEnterKey(event))
 function handleEnterKey(event) {
     if (event.key == 'Enter') {
         navsearchWeatherInfo(navSearchBar.value)
     }
 }
+
+
+mainnavSearchBar.addEventListener('input', function () {
+    // navSearchX.style.display = this.value.length > 0 ? 'block' : 'none';
+    navSearchBar.value = mainnavSearchBar.value
+});

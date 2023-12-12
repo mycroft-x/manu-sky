@@ -24,6 +24,14 @@ export function theming(isBig) {
             content.style.backgroundSize = "cover"
             homeForecast.style.color = '#fff'
             homeInfo.style.color = '#fff'
+            homeInfo.style.backgroundColor='rgba(0, 0, 0, 0.1)'
+            homeInfo.style.backdropFilter = 'blur(0.6px)'
+            homeInfo.style.border = 'solid 0.1px #fff'
+            homeForecast.style.backgroundColor='rgba(0, 0, 0, 0.1)'
+            homeForecast.style.backdropFilter = 'blur(0.6px)'
+            document.querySelector('.cofb').style.color = '#fff'
+            document.querySelector('#f-b').style.color = '#fff'
+            homeForecast.style.border = 'solid 0.1px #fff'
             // body.style.color = '#fff'
             
         } else{
@@ -31,6 +39,7 @@ export function theming(isBig) {
             homeForecast.style.color = '#000'
             homeInfo.style.color = '#000'
             body.style.color = '#000'
+            document.querySelector('#f-b').style.color = '#000'
             console.log("Falseeeee");
         }
     }
