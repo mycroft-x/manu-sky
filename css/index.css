@@ -457,7 +457,6 @@
         #home-info {
             height: calc(2/6 *100%);
             background: rgba(255, 255, 255, 0.8);
-            /* border: 0.1px #fff solid; */
             border-radius: 10px;
             width: 99%;
             flex-direction: row;
